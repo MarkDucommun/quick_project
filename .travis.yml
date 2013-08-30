@@ -1,8 +1,8 @@
 language: ruby
 before_install:
--gem install bundler
+  -gem install bundler
 rvm:
-- 1.9.3
+  - 1.9.3
 before_script:
   - psql -c 'create database quick_project_test;' -U postgres
 script:
