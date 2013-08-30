@@ -1,11 +1,11 @@
 language: ruby
 before_install:
-  -gem install bundler
+  - gem install bundler
 rvm:
   - 1.9.3
 before_script:
   - psql -c 'create database quick_project_test;' -U postgres
 script:
-  -RAILS_ENV=test bundle exec rake db:migrate --trace
-  -bundle exec rake db:test:prepare
-  -bundle exec rake
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
