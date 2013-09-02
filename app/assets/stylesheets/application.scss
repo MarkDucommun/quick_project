@@ -17,20 +17,8 @@ $blue: rgba(00,00,99,0.2);
 .page-wrap{
   display: -webkit-flex;
   -webkit-flex-direction: column;
-  
-  @include break(large) {
-    background: $green;
-  }
-  
-  @include break(mid) {
-    background: $blue;
-    margin: 0 5%;
-  }
-  
-  @include break(little) {
-    background: $red;
-    -webkit-flex-direction: column;
-  }
+  height: 500px;
+  // border-radius: 1em;
 }
 
 .nav{
@@ -38,8 +26,62 @@ $blue: rgba(00,00,99,0.2);
   -webkit-justify-content: space-around;
 }
 
+.sign-in, #sign-in{
+  display: none;
+}
+
+.sign-in{
+  height: 25%; width: 50%;
+  background: black;
+  top: 35%;
+  left: 25%;
+}
+
+.header{
+  -webkit-align-self: center;
+  text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
+  font-size: 30px;
+}
+
 button{
   border: none;
-  border: 1px solid black;
   -webkit-flex: 5;
+  padding: 2%;
+  margin: 2%;
+  box-shadow: 1px 1px 1px grey;
+}
+
+button:hover{
+  background: cyan;
+}
+
+@include break(large) {
+  .page-wrap{
+    background: $green;
+  }
+}
+
+@include break(mid) {
+  .page-wrap{
+    background: $blue;
+    margin: 0 5%;
+  }
+}
+
+@include break(little) {
+  .page-wrap{  
+    background: $red;
+    -webkit-flex-direction: column;
+  }
+
+  #sign-in{
+    display: block;
+  }
+
+  #facebook, 
+  #twitter,
+  #google{
+    display: none;
+  }
 }

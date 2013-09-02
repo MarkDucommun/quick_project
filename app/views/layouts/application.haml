@@ -3,17 +3,22 @@
   %title Quick_Project
   %meta{name: 'viewport', content: 'width = device-width' }
   = stylesheet_link_tag 'application'
-  = javascript_include_tag 'application' 
+  = javascript_include_tag 'application', 'index' 
   = csrf_meta_tags
 %body
   .page-wrap
+    .header
+      %h1 Stacking Game
     .nav
       %button{id: "sign-in"} Sign In
-      %button Facebook
-      %button Twitter
-      %button Google
+      %button{id: "facebook"} Facebook
+      %button{id: "twitter"} Twitter
+      %button{id: "google"} Google
       %button Tutorial
       %button Create
     .puzzles
       = yield
-  .sign-in
+.sign-in{data: {do: 'show'}}
+  %button Facebook
+  %button Twitter
+  %button Google
