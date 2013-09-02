@@ -1,16 +1,30 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/quick_project/app/controllers/application_controller.rb": [
+      "C:/Users/Mark/Desktop/quick_project/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/apprentice/quick_project/app/helpers/application_helper.rb": [
+      "C:/Users/Mark/Desktop/quick_project/app/helpers/application_helper.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1377911016
+    "timestamp": 1378064059
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "C:/Users/Mark/Desktop/quick_project/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "C:/Users/Mark/Desktop/quick_project/app/helpers/application_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1378064625
   }
 }

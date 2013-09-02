@@ -1,4 +1,7 @@
 QuickProject::Application.routes.draw do
+
+  resources :puzzles
+  root to: 'puzzles#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
