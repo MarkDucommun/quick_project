@@ -1,0 +1,45 @@
+$red: rgba(99,00,00,0.2);
+$green: rgba(00,99,00,0.2);
+$blue: rgba(00,00,99,0.2);
+
+@mixin break($point) {
+  @if $point == large {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == mid {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == little {
+    @media (max-width: 650px) { @content; }
+  }
+}
+
+.page-wrap{
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  
+  @include break(large) {
+    background: $green;
+  }
+  
+  @include break(mid) {
+    background: $blue;
+    margin: 0 5%;
+  }
+  
+  @include break(little) {
+    background: $red;
+    -webkit-flex-direction: column;
+  }
+}
+
+.nav{
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+}
+
+button{
+  border: none;
+  border: 1px solid black;
+  -webkit-flex: 5;
+}
