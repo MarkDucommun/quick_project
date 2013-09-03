@@ -20,9 +20,9 @@ QuickProject::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  Mysite::Application.configure do
-    Sass::Plugin.options[:never_update] = true
-  end
+  # Mysite::Application.configure do
+  #   Sass::Plugin.options[:never_update] = true
+  # end
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
